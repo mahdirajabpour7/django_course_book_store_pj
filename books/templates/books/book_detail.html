@@ -8,6 +8,8 @@
     <h1>{{ book.auther }}</h1>
     <h1>{{ book.price }}</h1>
     <a href="{% url "book_update" book.id %}"><button class="btn btn-info" type="button">viraesh</button></a>
+    <a href="{% url "book_delete" book.id %}"><button class="btn btn-danger" type="button">delete</button></a>
+
     <br>
     <a href="{% url "book_list"  %}">list hameh ketabha</a>
 {% endblock %}

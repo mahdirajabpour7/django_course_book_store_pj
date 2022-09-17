@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block page_title %}ijad ketab{% endblock %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+         <h1>Hazf ketab {{ book.title }}</h1>
+    <p>aya az hazf kardan ketab {{ book.title }} motmaeni ??</p>
+    <input type="submit" class="btn btn-danger" value="yes">
+    </form>
+    <a href="{% url "book_list" %}">list hameh ketabha</a>
+{% endblock %}
