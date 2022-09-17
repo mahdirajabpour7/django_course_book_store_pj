@@ -4,6 +4,7 @@ from django.views import generic
 
 
 from .models import Book
+#from .forms import NewPostFrom
 
 
 class BookListViews(generic.ListView):
@@ -15,4 +16,19 @@ class BookListViews(generic.ListView):
 class BookDetailView(generic.DetailView):
     model = Book
     template_name = "books/book_detail.html"
+
+
+class BookCreateView(generic.CreateView):
+
+    model = Book
+    fields = ["title", "author", "text", "price"]
+    template_name = "books/book_create.html"
+
+class BookUpdateView(generic.UpdateView):
+    model = Book
+    fields = ["title", "author", "text"]
+    template_name = "books/book_update.html"
+
+
+
 
