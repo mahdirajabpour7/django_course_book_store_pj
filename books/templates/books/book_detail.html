@@ -3,7 +3,8 @@
 {% block page_title %}{{ book.title }}jbbn{% endblock %}
 
 {% block content %}
-    <h1>{{ book.title }}</h1>
+    <h1>{{ book.title|capfirst }}</h1>
+    <h1>{{ book.text|linebreaksbr|truncatewords:10 }}</h1>
 
     <h1>{{ book.auther }}</h1>
     <h1>{{ book.price }}</h1>
