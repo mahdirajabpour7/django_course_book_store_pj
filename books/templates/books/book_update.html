@@ -1,13 +1,14 @@
 {% extends "_base.html" %}
+{% load crispy_forms_tags %}
 
 {% block page_title %}viraesh ketab{% endblock %}
 
 {% block content %}
     <h3>Add new Post:</h3>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
-            {{ form.as_table }}
+            {{ form|crispy }}
         </table>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
