@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # dddf
+
     "crispy_forms",
     #zxxvsdg
     "account",
@@ -150,3 +151,4 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 #media file
 MEDIA_URL = "/media/"
 MEDIA_ROOT = str(BASE_DIR.joinpath("media"))
+
